@@ -30,7 +30,8 @@ app.post('/todo', async (req, res) => {
 app.get('/todos', async (req, res) => {
     const response = await todo.find({});
     res.json({
-        "status": "success"
+        "status": "success",
+        todo: response
     })
 });
 
