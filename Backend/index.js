@@ -1,5 +1,5 @@
 const express = require('express');
-const { createTodo } = require('./inputValidation');
+const { createTodo, updateTodo } = require('./inputValidation');
 const app = express();
 const port = 3000;
 
@@ -21,7 +21,14 @@ app.get('/todos', (req, res) => {
 });
 
 app.put('/completed', (req, res) => {
-
+    const updatePayload = req.body;
+    const parsedPayload = updateTodo.safeParse(updatePayload);
+    if (!parsedPayload.success) {
+        res.status(411).json({
+            msg: "Wrong Inputs Please try again"
+        })
+        return;
+    }
 });
 
 app.listen(port, () => {
