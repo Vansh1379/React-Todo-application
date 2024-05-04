@@ -1,11 +1,13 @@
 const express = require('express');
 const { createTodo, updateTodo } = require('./inputValidation');
+const { todo } = require('./db/db')
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
-app.post('/todo', (req, res) => {
+app.post('/todo', async (req, res) => {
+    // zod
     const createPayload = req.body;
     const parsedPayload = createTodo.safeParse(createPayload);
     if (!parsedPayload.success) {
@@ -14,10 +16,22 @@ app.post('/todo', (req, res) => {
         })
         return;
     }
+    // moongooose
+    await todo.create({
+        title: createPayload.title,
+        description: createPayload.description,
+    })
+
+    res.json({
+        msg: "Todo Created Successfully"
+    })
 });
 
-app.get('/todos', (req, res) => {
-
+app.get('/todos', async (req, res) => {
+    const response = await todo.find({});
+    res.json({
+        "status": "success"
+    })
 });
 
 app.put('/completed', (req, res) => {
