@@ -1,6 +1,6 @@
 const express = require('express');
 const { createTodo, updateTodo } = require('./inputValidation');
-const { todo } = require('./db/db')
+const { todo } = require('./db')
 const app = express();
 const port = 3000;
 
@@ -28,7 +28,7 @@ app.post('/todo', async (req, res) => {
     })
 });
 
-app.get('/todos', async (req, res) => {
+app.get('/todo', async (req, res) => {
     const response = await todo.find({});
     res.json({
         "status": "success",
