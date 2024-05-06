@@ -1,7 +1,8 @@
+import "./CreateTodo.css"
 
 export function CreateTodo() {
     return (
-        <div>
+        <div className="CreateTodo">
             <h1>TODO APP</h1>
             <input type="text" placeholder="Title" />
             <br />
@@ -9,7 +10,7 @@ export function CreateTodo() {
             <input type="text" placeholder="Description" />
             <br />
             <br />
-            <button>Add a Todo</button>
+            <button className="Button">Add a Todo</button>
         </div>
     );
 }

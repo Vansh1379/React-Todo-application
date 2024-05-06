@@ -1,0 +1,22 @@
+.CreateTodo {
+    margin-left: 40%;
+    border: 1px solid whitesmoke;
+    width: 250px;
+    box-shadow: 5px 5px 10px rgba(209, 33, 95, 0.5);
+}
+
+.Button {
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 10px rgba(205, 35, 227, 0.5);
+}
+
+.Button:hover {
+    height: 25px;
+    transition: ease-in;
+}
+
+input {
+    border: none;
+    height: 22px;
+    box-shadow: 5px 5px 10px rgba(18, 166, 207, 0.911);
+}
