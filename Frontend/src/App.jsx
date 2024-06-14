@@ -10,7 +10,7 @@ function App() {
   fetch("http://localhost:3000/todos")
     .then(async function (res) {
       const json = await res.json();
-      setTodos(json.todos);
+      setTodos(json);
     }).catch(error => console.error('Error fetching todos:', error));
 
   return (
