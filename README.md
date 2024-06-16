@@ -12,3 +12,10 @@ It has following features :-
 # Tech Stack Used :- 
 
 - <h4> Frontend</h4>
+- React.js
+
+-<h4>Backend</h4>
+- Node.js
+- Express.js
+- Mongo DB
+- Zod (Input Validation)
