@@ -11,8 +11,9 @@ It has following features :-
 
 # Tech Stack Used :- 
 
-- <h4> Frontend</h4>
+-<h4> Frontend</h4>
 - React.js
+- React Hooks
 
 -<h4>Backend</h4>
 - Node.js
