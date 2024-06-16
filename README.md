@@ -10,11 +10,9 @@ It has following features :-
 - A user can mark a Todo as done
 
 # Tech Stack Used :- 
-
 -<h4> Frontend</h4>
 - React.js
 - React Hooks
-
 -<h4>Backend</h4>
 - Node.js
 - Express.js
