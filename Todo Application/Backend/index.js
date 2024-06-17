@@ -1,6 +1,6 @@
 const express = require('express');
-const { createTodo, updateTodo } = require('./inputValidation');
-const { todo } = require('./db')
+const { createTodo, updateTodo } = require('./Zod/inputValidation');
+const { todo } = require('./schema/db')
 const cors = require("cors");
 const app = express();
 const port = 3000;
