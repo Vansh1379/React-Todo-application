@@ -8,6 +8,7 @@ It has following features :-
 - A user can Create a Todo
 - A user can see their existing Todo
 - A user can mark a Todo as done
+- A user can delete a Todo
 
 # Tech Stack Used :- 
 
