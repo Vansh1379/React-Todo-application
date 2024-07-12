@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-const { boolean } = require("zod");
 
 mongoose.connect('mongodb+srv://vanshkalra1379:kalra1379@cluster0.rjd2jaw.mongodb.net/Todo-App');
 
