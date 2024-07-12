@@ -30,6 +30,10 @@ export function CreateTodo() {
                         "Content-Type": "application/json",
                     }
                 })
+                // axios.post("localhost://3000", {
+                //     title: title,   
+                //     description: description
+                // })
                     .then(async function (res) {
                         const json = await res.json();
                         alert("Todo Added meri jaan");
