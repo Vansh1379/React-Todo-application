@@ -1,4 +1,4 @@
-import Todo  from "../schema/db";
+import Todo from "../schema/db";
 const { createTodo, updateTodo } = require('./Zod/inputValidation');
 
 export const Createtodo = async (req, res) => {
@@ -14,7 +14,7 @@ export const Createtodo = async (req, res) => {
     await Todo.create({
         title: createPayload.title,
         description: createPayload.description,
-        completed: false
+        completed: false,
     })
 
     res.json({
